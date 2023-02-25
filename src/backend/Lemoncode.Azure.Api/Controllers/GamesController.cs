@@ -160,7 +160,7 @@ namespace Lemoncode.Azure.Api.Controllers
                     break;
             }
 
-            await blob.DeleteFolderBlobs(container, folder);
+            await blob.DeleteFolderBlobs(storageOptions.ScreenshotsContainer, folder);
             //context.Game.Remove(game);
             await context.SaveChangesAsync();
 
