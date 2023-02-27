@@ -1,6 +1,6 @@
 # Cloud
 
-This is my web applicatio named lemoncode.
+This is my web application named lemoncode.
 
 ![aplicacion web](https://user-images.githubusercontent.com/107713900/221672926-7c34e1c7-ef3c-4fa3-ae33-005f114dcd7a.png)
 
