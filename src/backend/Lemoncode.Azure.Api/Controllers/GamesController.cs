@@ -132,7 +132,6 @@ namespace Lemoncode.Azure.Api.Controllers
             }
 
             string folder = "";
-            string container = "screenshots";
            
             switch (id)
             {
@@ -161,7 +160,7 @@ namespace Lemoncode.Azure.Api.Controllers
             }
 
             await blob.DeleteFolderBlobs(storageOptions.ScreenshotsContainer, folder);
-            //context.Game.Remove(game);
+            context.Game.Remove(game);
             await context.SaveChangesAsync();
 
             return Ok();
