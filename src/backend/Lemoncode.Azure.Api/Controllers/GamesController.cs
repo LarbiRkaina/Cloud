@@ -131,35 +131,31 @@ namespace Lemoncode.Azure.Api.Controllers
                 return NotFound();
             }
 
-            string folder = "";
-           
-            switch (id)
-            {
-                case 1:
-                    folder = "mi1";
-                    break;
-                case 2:
-                    folder = "mi2";
-                    break;
-                case 3:
-                    folder = "mi3";
-                    break;
-                case 4:
-                    folder = "mi4";
-                    break;
-                case 5:
-                    folder = "mi5";
-                    break;
+            // string folder = "";
 
-                case 6:
-                    folder = "mi6";
-                    break;
-                default:
-                    folder = "sf2";
-                    break;
-            }
+            // if (id == 1){
+            //     folder = "mi1";
 
-            await blob.DeleteFolderBlobs(storageOptions.ScreenshotsContainer, folder);
+            // } else if (id ==2) {
+            //     folder = "mi2";
+
+            // }else if (id == 3) {
+            //     folder = "mi3";
+
+            // }else if (id == 4) {
+            //     folder = "mi4";
+
+            // }else if (id == 5) {
+            //     folder = "mi5";
+
+            // }else if (id == 6) {
+            //     folder = "mi6";
+
+            // }else {
+            //     folder = "sf2";
+            // }
+
+            await blob.DeleteFolderBlobs(storageOptions.ScreenshotsContainer, id.ToString());
             context.Game.Remove(game);
             await context.SaveChangesAsync();
 
