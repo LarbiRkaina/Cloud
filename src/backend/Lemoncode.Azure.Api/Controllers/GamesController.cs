@@ -154,6 +154,8 @@ namespace Lemoncode.Azure.Api.Controllers
             // }else {
             //     folder = "sf2";
             // }
+            
+            // await blob.DeleteFolderBlobs(storageOptions.ScreenshotsContainer, folder);
 
             await blob.DeleteFolderBlobs(storageOptions.ScreenshotsContainer, id.ToString());
             context.Game.Remove(game);
